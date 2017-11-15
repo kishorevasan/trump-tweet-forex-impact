@@ -1,5 +1,5 @@
 library(dplyr)
-tweets <- read.csv(file='../data/realDonaldTrump_tweets.csv', stringsAsFactors = FALSE)
+tweets <- read.csv(file='../data/unique_dates.csv', stringsAsFactors = FALSE)
 currency <- read.csv(file='../data/Korea_CER.csv', stringsAsFactors = FALSE)
 
 colnames(currency) <- c('date', 'currency')
