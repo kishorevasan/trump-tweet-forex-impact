@@ -13,7 +13,7 @@ curr <- currency %>%
         filter(date == tweets$created_at[1]) %>%
         select(date)
 
-for (i in 1:10) {
+for (i in 1:length(tweets)) {
   idx <- match(tweets$created_at[i], currency$date)
   print(idx)
   before <- as.numeric(currency$currency[idx-1])
