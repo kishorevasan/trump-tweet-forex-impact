@@ -21,7 +21,7 @@ new.data <- new.data[!(new.data$date %in% tweets$created_at),]
 
 for(i in 1:5) {
   rand <- new.data[sample(nrow(new.data), length(tweets$created_at)), ]
-  for (i in 1:length(rand)) {
+  for (i in 1:length(rand$date)) {
     index <- match(rand$date[i], currency$date)
     before1 <- as.numeric(currency$currency[index-1])
     current1 <- as.numeric(currency$currency[index])
